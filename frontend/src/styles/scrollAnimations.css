@@ -1,0 +1,493 @@
+/**
+ * Smooth Scroll Animations Stylesheet
+ * Applied to elements with data-scroll-animation attribute
+ */
+
+/* Base scroll animation class */
+.scroll-animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Fade In */
+.fade-in {
+  animation-name: scrollFadeIn;
+}
+
+@keyframes scrollFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide Up */
+.slide-up {
+  animation-name: scrollSlideUp;
+}
+
+@keyframes scrollSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Down */
+.slide-down {
+  animation-name: scrollSlideDown;
+}
+
+@keyframes scrollSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Left */
+.slide-left {
+  animation-name: scrollSlideLeft;
+}
+
+@keyframes scrollSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide Right */
+.slide-right {
+  animation-name: scrollSlideRight;
+}
+
+@keyframes scrollSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom In */
+.zoom-in {
+  animation-name: scrollZoomIn;
+}
+
+@keyframes scrollZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Bounce In */
+.bounce-in {
+  animation-name: scrollBounceIn;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes scrollBounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rotate In */
+.rotate-in {
+  animation-name: scrollRotateIn;
+}
+
+@keyframes scrollRotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* Flip In (X-axis) */
+.flip-x {
+  animation-name: scrollFlipX;
+}
+
+@keyframes scrollFlipX {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0);
+  }
+}
+
+/* Flip In (Y-axis) */
+.flip-y {
+  animation-name: scrollFlipY;
+}
+
+@keyframes scrollFlipY {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0);
+  }
+}
+
+/* Light Speed In */
+.light-speed {
+  animation-name: scrollLightSpeed;
+  animation-timing-function: ease-out;
+}
+
+@keyframes scrollLightSpeed {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) skewX(20deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) skewX(0deg);
+  }
+}
+
+/* Roll In */
+.roll-in {
+  animation-name: scrollRollIn;
+}
+
+@keyframes scrollRollIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Attention Seeker - Pulse */
+.pulse {
+  animation-name: scrollPulse;
+  animation-duration: 1.5s;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Heart Beat */
+.heart-beat {
+  animation-name: scrollHeartBeat;
+  animation-duration: 1.3s;
+}
+
+@keyframes scrollHeartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.15);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+/* Jello */
+.jello {
+  animation-name: scrollJello;
+}
+
+@keyframes scrollJello {
+  0%, 11.1%, 100% {
+    transform: skewX(0deg) skewY(0deg);
+  }
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    transform: skewX(-6.25deg) skewY(-6.25deg);
+  }
+  55.5% {
+    transform: skewX(3.125deg) skewY(3.125deg);
+  }
+  66.6% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  77.7% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  88.8% {
+    transform: skewX(-1.5625deg) skewY(-1.5625deg);
+  }
+}
+
+/* Fade In Scroll (for gradual fade) */
+.fade-in-scroll {
+  animation: scrollFadeIn 1s ease-out forwards;
+}
+
+/* Stagger Animations */
+.stagger-1 {
+  animation-delay: 0ms;
+}
+.stagger-2 {
+  animation-delay: 100ms;
+}
+.stagger-3 {
+  animation-delay: 200ms;
+}
+.stagger-4 {
+  animation-delay: 300ms;
+}
+.stagger-5 {
+  animation-delay: 400ms;
+}
+.stagger-6 {
+  animation-delay: 500ms;
+}
+.stagger-7 {
+  animation-delay: 600ms;
+}
+.stagger-8 {
+  animation-delay: 700ms;
+}
+.stagger-9 {
+  animation-delay: 800ms;
+}
+.stagger-10 {
+  animation-delay: 900ms;
+}
+
+/* Duration variations */
+.duration-0-5s {
+  animation-duration: 0.5s;
+}
+.duration-1s {
+  animation-duration: 1s;
+}
+.duration-1-5s {
+  animation-duration: 1.5s;
+}
+.duration-2s {
+  animation-duration: 2s;
+}
+
+/* Easing variations */
+.ease-in {
+  animation-timing-function: ease-in;
+}
+.ease-out {
+  animation-timing-function: ease-out;
+}
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+.ease-linear {
+  animation-timing-function: linear;
+}
+
+/* Smooth horizontal scroll animations */
+.scroll-reveal-left {
+  position: relative;
+  animation: revealLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes revealLeft {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.scroll-reveal-right {
+  position: relative;
+  animation: revealRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes revealRight {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.scroll-reveal-bottom {
+  position: relative;
+  animation: revealBottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes revealBottom {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Smooth scale animations */
+.scroll-scale-up {
+  animation: scaleUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Text animations */
+.text-gradient-animate {
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Smooth infinite animations */
+.float-animate {
+  animation: floatScroll 3s ease-in-out infinite;
+}
+
+@keyframes floatScroll {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.glow-animate {
+  animation: glowScroll 2s ease-in-out infinite;
+}
+
+@keyframes glowScroll {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+  }
+}
+
+/* Scroll progress bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift during scroll animations */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile-optimized animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimizations */
+@media (max-width: 768px) {
+  .scroll-animated {
+    animation-duration: 0.6s;
+  }
+
+  .pulse,
+  .heart-beat,
+  .jello {
+    animation-duration: 1s;
+  }
+}
